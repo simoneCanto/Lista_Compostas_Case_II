@@ -1,0 +1,29 @@
+cardapio = [['Lanche', 10.9], ['Batata',  5.5], ['Refri' ,  3.9]]
+print('-'*34)
+print('-'*12, 'Cardápio', '-'*12)
+print('-'*34)
+print(cardapio[0][0], '.'*22, cardapio[0][1])
+print(cardapio[1][0], '.'*23, cardapio[1][1])
+print(cardapio[2][0], '.'*24, cardapio[2][1])
+print('-'*34)
+print()
+x = float(input('Quantos Lanches você quer comprar? '))
+print()
+y = float(input('Quantas Batatas você quer comprar? '))
+print()
+z = float(input('Quantos Refris você quer comprar? '))
+print()
+
+qtde = [x,y,z]
+
+mult1 = x * cardapio[0][1]
+mult2 = y * cardapio[1][1]
+mult3 = z * cardapio[2][1]
+
+soma = mult1 + mult2 + mult3
+
+print('Você comprou', x, cardapio[0][0] )
+print('Você comprou', y, cardapio[1][0] )
+print('Você comprou', z, cardapio[2][0] )
+print()
+print('o Valor total de sua compra foi de', round(soma, 2))
