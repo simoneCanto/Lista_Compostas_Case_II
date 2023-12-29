@@ -1,0 +1,50 @@
+# Parte 1 cadastra informações sobre clientes
+cadastro = [] 
+pessoas = []
+
+while True:
+    print()
+    print("1-Cadastrar pessoa")
+    print('2-Finalizar')
+    print('3-Procurar pessoa')
+    print()
+    op = int(input('Escolha a opção desejada: '))#Escolha da opcao
+    if op == 1:
+        pessoas.append(str(input('Digite o nome da pessoa: ')))
+        pessoas.append(str(input('Digite o e-mail da pessoa: ')))
+        pessoas.append(int(input('Digite o telefone da pessoa: ')))
+        pessoas.append(int(input('Digite a idade da pessoa: ')))
+        cadastro.append(pessoas[:])  # armazena as informações antigas
+        pessoas.clear() # zera para receber informações para a próxima posição
+
+    elif op == 2:
+      print('Fim da consulta')
+      print()
+      print('Lista cadastrada:')
+      print(cadastro)
+      break
+    
+    # Realiza busca pelo cliente
+    elif op == 3:
+     # Realiza a busca dentro da lista
+      def busca(valor):
+          i, j = 0,0 # indides incialmente definidos como 0
+
+          # percorrendo lista externa
+          for sub in cadastro:
+              #verificando se o valor buscado esta dentro de alguma lista interna
+              if valor in sub:
+                  # atribuindo o indice do valor buscado a j
+                  j = sub.index(valor)
+                  break # sai do loop
+              i +=1 # incrementa
+          else:
+              # caso o valor buscado nao seja encontrado
+              return None
+
+          return cadastro[i][0], cadastro[i][1], cadastro[i][2], cadastro[i][3]
+
+
+      result = busca(str(input('Digite o e-mail da pessoa: ')))
+      print(result)
+      break
