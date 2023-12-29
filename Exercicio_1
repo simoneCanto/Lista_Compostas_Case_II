@@ -1,0 +1,8 @@
+cardapio = [['Lanche', 10.9], ['Batata',  5.5], ['Refri' ,  3.9]]
+print('-'*34)
+print('-'*12, 'Cardápio', '-'*12)
+print('-'*34)
+print(cardapio[0][0], '.'*22, cardapio[0][1])
+print(cardapio[1][0], '.'*23, cardapio[1][1])
+print(cardapio[2][0], '.'*24, cardapio[2][1])
+print('-'*34)
